@@ -15,3 +15,8 @@ instance. Purely a local dev convenience — not deployed anywhere.
 - Zipkin: intended for all request-path services (tracing currently parked —
   see agent-service's README status notes for known Boot 4.1.x upstream
   issues)
+  
+## Startup order
+config-server → eureka-server → kafka-local (docker) →
+inventory-service → pricing-service → api-gateway → agent-service →
+audit-service → notification-service
